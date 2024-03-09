@@ -1030,23 +1030,7 @@ address.footer-contact-link { max-width: 30ch; }
 
 
 
-  /**
-   * APP
-   */
-
-  .app { padding-block: 0; }
-
-  .app .container {
-    display: grid;
-    grid-template-columns: 0.8fr 1fr;
-    align-items: flex-end;
-    gap: 30px;
-  }
-
-  .app-banner { margin-block-start: 0; }
-
-  .app-content { margin-block: 50px; }
-
+  
 }
 
 
@@ -1124,21 +1108,6 @@ address.footer-contact-link { max-width: 30ch; }
     display: none;
   }
 
-
-
-  /**
-   * ABOUT, APP
-   */
-
-  :is(.about, .app) .container { gap: 60px; }
-
-
-
-  /**
-   * APP
-   */
-
-  .app-content { margin-block: 100px; }
 
 
 
