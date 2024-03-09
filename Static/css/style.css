@@ -1189,6 +1189,41 @@ address.footer-contact-link { max-width: 30ch; }
 }
 
 
+  /**
+  * ABOUT INTRO
+  */
+
+  .s1 {
+    padding: 3em 5em 3em 5em;
+    text-align: center;
+    font-weight: 3em;
+    font-size: 2em;
+    font-family:'Times New Roman', Times, serif;
+    border-bottom: 2px solid black;
+}
+.s2{
+  display: block;
+  padding: 5em 0 0 5em;
+  max-width: 69em;
+  justify-content:center;
+  
+}
+p{
+  font: 1em;
+  font-size: 1rem;
+  line-height: 1.8;
+  font-family: serif;
+  margin: 1em 0em 0.9em;
+  
+}
+.p123{
+  justify-content: space-between;
+  display: flex;  
+}
+
+
+
+
 
   /**
   * TEAM 
