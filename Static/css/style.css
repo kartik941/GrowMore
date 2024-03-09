@@ -1194,6 +1194,42 @@ address.footer-contact-link { max-width: 30ch; }
   * TEAM 
   */
 
+  .heading, .clients .section-header h2, .section-head h1, .testimonials .section-header h2, .section-head-1 h4{
+    margin: 2rem;
+    padding-top: 6rem;
+    display: inline-block;
+    font-size: 3.5rem;
+    color: #002e5f;
+    position: relative;
+    letter-spacing: .2rem;
+}
+
+.heading::before, .heading::after, .clients .section-header h2::before, .clients .section-header h2::after, .section-head h1::before, .section-head h1::after, .testimonials .section-header h2::before, .testimonials .section-header h2::after, .section-head-1 h4::before, .section-head-1 h4::after{
+    content: '';
+    position: absolute;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-top: .4rem solid #002e5f;
+    border-left: .4rem solid #002e5f;
+}
+
+.faq .heading::before, .faq .heading::after{
+    border-top: .4rem solid #00bfff;
+    border-left: .4rem solid #00bfff;
+}
+
+.heading::before, .clients .section-header h2::before, .section-head h1::before, .testimonials .section-header h2::before, .section-head-1 h4::before{
+    top: 5.8rem;
+    left: -2rem;
+}
+
+.heading::after, .clients .section-header h2::after, .section-head h1::after, .testimonials .section-header h2::after, .section-head-1 h4::after{
+    bottom: -.5rem;
+    right: -2rem;
+    transform: rotate(180deg);
+}
+
+
   .team{
     min-width: 100vw;
     min-height: 95vh;
@@ -1235,7 +1271,7 @@ address.footer-contact-link { max-width: 30ch; }
 
 
 .team .row .card .image{
-    margin: 1rem 0;
+    margin: 1rem 5rem;
     padding-top: 4rem;
 }
 
@@ -1307,4 +1343,15 @@ address.footer-contact-link { max-width: 30ch; }
     background: #ccc;
     bottom: -3rem;
     left: -4rem;
+}
+
+.heading, .clients .section-header h2, .section-head h1, .testimonials .section-header h2, .section-head-1 h4 {
+  margin: 2rem;
+  padding-top: 6rem;
+  display: inline-block;
+  font-size: 3.5rem;
+  color: #002e5f;
+  position: relative;
+  letter-spacing: .2rem;
+  font-family: 'Poppins', sans-serif;
 }
