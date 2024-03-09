@@ -696,40 +696,6 @@ body.active { overflow: hidden; }
 
 
 
-/*-----------------------------------*\
-  #APP
-\*-----------------------------------*/
-
-.app {
-  overflow: hidden;
-  padding-block-end: 0;
-}
-
-.app-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 15px;
-}
-
-.app-banner {
-  position: relative;
-  margin-block-start: 60px;
-}
-
-.app-banner .span {
-  position: absolute;
-  top: 10%;
-  left: 0;
-  color: var(--white);
-  font-size: var(--fs-7);
-  font-weight: var(--fw-700);
-  padding: 8px 15px;
-  border: 2px solid var(--white);
-  border-radius: 50px;
-}
-
-
 
 
 
@@ -995,7 +961,7 @@ address.footer-contact-link { max-width: 30ch; }
 
   .header { padding-block: 5px; }
 
-  .header.active { top: -60px; }
+  .header.active { top: -85px; }
 
   .header > .container { gap: 50px; }
 
