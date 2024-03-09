@@ -1193,8 +1193,8 @@ address.footer-contact-link { max-width: 30ch; }
   * ABOUT INTRO
   */
 
-  .s1 {
-    padding: 3em 5em 3em 5em;
+  /* .s1 {
+    padding: 6em 5em 3.5em 5em;
     text-align: center;
     font-weight: 3em;
     font-size: 2em;
@@ -1202,27 +1202,28 @@ address.footer-contact-link { max-width: 30ch; }
     border-bottom: 2px solid black;
 }
 .s2{
-  display: block;
+  display:inline;
   padding: 5em 0 0 5em;
-  max-width: 69em;
-  justify-content:center;
-  
+  max-width: 63em;
+  justify-content:center; 
+  box-sizing: border-box;
+  display: table;
+  clear: both;
 }
 p{
   font: 1em;
   font-size: 1rem;
   line-height: 1.8;
   font-family: serif;
-  margin: 1em 0em 0.9em;
-  
-}
-.p123{
-  justify-content: space-between;
-  display: flex;  
+  margin: 1em 0em 0.9em;  
 }
 
-
-
+.column{
+  width: 50%;
+  padding: 1em;
+  height: 19em;
+  justify-content:center; 
+} */
 
 
   /**
