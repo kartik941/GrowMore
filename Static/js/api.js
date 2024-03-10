@@ -1,4 +1,4 @@
-const url = 'https://real-time-finance-data.p.rapidapi.com/search?query=Apple&language=en';
+const url = 'https://real-time-finance-data.p.rapidapi.com/search?query=Tata&language=en';
 const options = {
 	method: 'GET',
 	headers: {
