@@ -11,3 +11,7 @@ def market(request):
 
 def charts(request):
     return render(request,"charts.html")
+def news(request):
+    return render(request,"news.html")
+def analyse(request):
+    return render(request,"beg.html")
