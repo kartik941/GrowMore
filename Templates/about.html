@@ -4,14 +4,14 @@
 
 
 
-<section class="s1">
+{% comment %} <section class="s1">
     We pioneered the discount broking model in India. <br>
     Now, we are breaking ground with our technology.
 </section>
 
 <section class="s2">
-    <div>
-        <div class="p123">
+    <div class="row">
+        <div class="column">
             <p>
                 We kick-started operations on the 15th of August, 2010 with the goal of breaking all barriers that
                 traders and investors face in India in terms of cost, support, and technology. We named the company
@@ -28,7 +28,7 @@
                 platforms, contributing over 15% of all Indian retail trading volumes.
             </p>
         </div>
-        <div class="p123">
+        <div class="column">
             <p>
                 In addition, we run a number of popular open online educational and community initiatives to empower
                 retail traders and investors.
@@ -46,13 +46,50 @@
         </div>
     </div>
 
-</section>
+</section> {% endcomment %}
 
 
 
+<section id="about" class="about">
+    <h1 class="heading">about us</h1>
+    <div class="row">
+        <div class="content">
+            <h3>We make creativity work for your brand!</h3>
+            <p>Ours is a team of creatives that is brainstorming on great ideas,<b> all. the. time.</b><br>
+                With our skills put together, you get an ensemble capable of doing anything and everything your brand needs.</p>
+            <a href="#"><button class="btn">Read More</button></a>
+        </div>
+    </div>
+  </section>
 
-
-
+  <div class="pt-5 pb-5" style="background-color: #f2f2f2;">
+    <div class="container">
+      <div class="row">
+        <div class="section-head col-sm-12" id="service">
+          <h1>Our Services</h1>
+          <p>We help you to build high-quality digital solutions and products as well as deliver a wide range of related professional services. We are providing world-class service to our clients.
+            </p>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <div class="item"> <span class="icon feature_box_col_one"><i class="fa fa-laptop"></i></span>
+            <h6>Trading Platform</h6>
+            <p>Deliver a user-friendly online trading platform allowing customers to easily execute buy and sell orders for stocks, bonds, options, and various financial instruments with intuitive navigation and functionality.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <div class="item"> <span class="icon feature_box_col_two"><i class="fa fa-android"></i></span>
+            <h6>Mobile Trading</h6>
+            <p>Create a mobile trading app enabling customers to trade anytime, access real-time market data, and effectively manage their portfolios directly from their smartphones or tablets for convenient and efficient trading.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <div class="item"> <span class="icon feature_box_col_three"><i class="fa fa-magic"></i></span>
+            <h6>Research and Analysis</h6>
+            <p>Provide customers with access to extensive research reports, market analysis, and up-to-date financial news to empower them in making well-informed investment decisions for their portfolios.</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
 <section class="team" style="margin-top: 7rem;">
     <h1 class="heading" style="margin-top: -1.5rem;" id="team">Our Team</h1>
@@ -109,6 +146,27 @@
         </div>
     </div>
   </section>
+
+
+  <section id="contact" class="contact">
+    <h1 class="heading">get in touch</h1>
+</section>
+<div class="contact-in">
+    <div class="contact-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30711243.17762776!2d64.4398422293091!3d20.011408266548177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1644684739958!5m2!1sen!2sin" width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <div class="contact-form">
+        <form action="./contactme.php" method="POST">
+            <input type="text" name="name" placeholder="Name" class="contact-form-txt" required>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="Contact number" maxlength="10" class="contact-form-phone">
+            <input type="email" name="email" placeholder="Email" class="contact-form-email" required>
+            <textarea placeholder="Your Message" name="message" class="contact-form-txtarea" required></textarea>
+            <input type="submit" value="Submit" name="submit" class="contact-form-btn">
+        </form>
+    </div>
+    </div>
+
+    
 
 
 {% endblock content %}
