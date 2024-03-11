@@ -1166,10 +1166,7 @@ p{
 * ABOUT US
 */
 
-*{
-  font-family: 'Poppins', sans-serif;
-  text-transform: capitalize;  
-}
+
 
 .about{
   min-height: 55vh;
