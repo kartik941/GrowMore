@@ -1,4 +1,4 @@
-const url = 'https://real-time-finance-data.p.rapidapi.com/search?query=Apple&language=en';
+const url = 'https://real-time-finance-data.p.rapidapi.com/search?query=Tata&language=en';
 const options = {
 	method: 'GET',
 	headers: {
@@ -14,9 +14,9 @@ const options = {
         let tabledata = ""
         let count = 0
         Data.data.stock.map((values)=>{
-            console.log(values)
+
             count = count+1
-            tabledata+=`<tr>
+            tabledata+=`<tr >
             <th scope="row">${count}</th>
             <td>${values.name}</td>
             <td>${values.symbol}</td>
