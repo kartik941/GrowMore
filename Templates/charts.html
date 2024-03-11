@@ -1,7 +1,15 @@
 {% extends "main.html" %}
 {% load static %}
+{% block head %}
+<style>
+    .chart a { 
+      opacity:  0; 
+      pointer-events: none;
+    }
+</style>
+{% endblock head %}
 {% block content %}
-<div style="margin-top: 9rem;">
+<div style="margin-top: 9rem;" class="chart">
     <!-- TradingView Widget BEGIN -->
   <div class="tradingview-widget-container">
     <div class="tradingview-widget-container__widget"></div>
