@@ -1,119 +1,105 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GrowMore</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
+{% extends "main.html" %}
+{% load static %}
 {% block head %}
-
+<style>
+    .chart a { 
+      opacity:  0; 
+      pointer-events: none;
+    }
+</style>
 {% endblock head %}
-  </head>
-  <body>
-    <!DOCTYPE html>
-<html lang="en">
+{% block content %}
+<div style="margin-top: 11rem;display: flex;" class="chart container" >
+<div style="flex: 60">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GrowMore - Buy & Sell Digital static In The GrowMore</title>
+    <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+ {
+    "width": "100%",
+  "height": "400",
+  "symbol": "BSE:ZOMATO",
+  "interval": "D",
+  "timezone": "Etc/UTC",
+  "theme": "dark",
+  "style": "1",
+  "locale": "en",
+  "enable_publishing": false,
+  "allow_symbol_change": true,
+  "calendar": false,
+  "support_host": "https://www.tradingview.com"
+}
+    </script>
+    </div>
+</div>
+<div style="flex: 40;">
 
-  <!-- 
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+</div>
+    
 
-  <!-- 
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./static/css/style.css">
+</div>
 
-  <!-- 
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-</head>
+<footer class="footer">
+    
+    <div class="footer-top" data-section>
+        <div class="container">
+            
+            <div class="footer-brand">
+                
+                <a href="#" class="logo">
+            <img src="./static/images/logo.png" width="75" height="75" alt="GrowMore logo">
+            GrowMore
+          </a>
 
-<body>
+          <h2 class="footer-title">Let's talk! 🤙</h2>
 
-  <!-- 
-    - #HEADER
-  -->
-
-  <header class="header" data-header>
-    <div class="container">
-
-      <a href="#" class="logo ">
-        <img  src="./static/images/logo.png" width="72" height="52" alt="GrowMore logo">
-        GrowMore
-      </a>
-
-      <nav class="navbar" data-navbar>
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <a href="home" class="navbar-link active" data-nav-link>Homepage</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="charts" class="navbar-link" data-nav-link>Charts</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="market" class="navbar-link" data-nav-link>Markets</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#" class="navbar-link" data-nav-link>Sell Crypto</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#" class="navbar-link" data-nav-link>Blog</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="about" class="navbar-link" data-nav-link>About</a>
-          </li>
-
+          <a href="tel:+123456789101" class="footer-contact-link">+91 94667-71896</a>
+          
+          <a href="mailto:hello.GrowMore@gmail.com" class="footer-contact-link">GrowMore@gmail.com</a>
+          
+          <address class="footer-contact-link">
+              Chandigarh-Patiala National Highway Punjab 140401
+            </address>
+            
+        </div>
+        
+        <ul class="footer-list">
+            
+            <li>
+                <p class="footer-list-title">Products</p>
+            </li>
+            
+            <li>
+                <a href="#" class="footer-link">Spot</a>
+            </li>
+            
+            <li>
+                <a href="#" class="footer-link">Inverse Perpetual</a>
+            </li>
+            
+            <li>
+                <a href="#" class="footer-link">USDT Perpetual</a>
+            </li>
+            
+            <li>
+                <a href="#" class="footer-link">Exchange</a>
+            </li>
+            
+            <li>
+                <a href="#" class="footer-link">Launchpad</a>
+            </li>
+            
+            <li>
+                <a href="#" class="footer-link">Binance Pay</a>
+            </li>
+            
         </ul>
-      </nav>
-
-      <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>
-        <span class="line line-1"></span>
-        <span class="line line-2"></span>
-        <span class="line line-3"></span>
-      </button>
-
-      <a href="#" class="btn btn-outline">Wallet</a>
 
     </div>
-  </header>
+</div>
 
-    {% block content %}
-
-    
-    {% endblock content %}
+</footer>
 
 
-
-
-
-
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-
-</body>
-</html>
+{% endblock content %}

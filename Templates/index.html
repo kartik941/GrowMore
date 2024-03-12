@@ -1,8 +1,15 @@
 {% extends "main.html" %}
 {% load static %}
 
+{% block head %}
+<style>
+    .hometrend a { 
+    opacity:  0; 
+    pointer-events: none;
+  }
 
-
+</style>
+{% endblock head%}
 {% block content %}
 
 
@@ -21,10 +28,10 @@
                     <h1 class="h1 hero-title">Buy & Sell Digital static In The GrowMore</h1>
 
             <p class="hero-text">
-              Coin GrowMore is the easiest, safest, and fastest way to buy & sell crypto asset exchange.
+              Navigate markets with trust and confidence. Empower your journey to financial success. Welcome to GrowMore.
             </p>
 
-            <a href="#" class="btn btn-primary">Get started now</a>
+            <a href="charts" class="btn btn-primary">Get started now</a>
             
         </div>
         
@@ -43,7 +50,7 @@
     - #TREND
 -->
 
-<section class="section trend" aria-label="crypto trend" data-section>
+{% comment %} <section class="section trend" aria-label="crypto trend" data-section>
     <div class="container">
         
         <div class="trend-tab">
@@ -183,7 +190,79 @@
 </div>
 
 </div>
-</section>
+</section> {% endcomment %}
+<div class="container hometrend row">
+    <div class="col-md-6">
+
+        
+        <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+    {
+    "symbol": "BSE:SENSEX",
+    "width": 350,
+    "isTransparent": false,
+    "colorTheme": "dark",
+    "locale": "en"
+  }
+    </script>
+  </div>
+  
+  
+
+
+  
+<div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+    {
+    "symbol": "NSE:NIFTY",
+    "width": 350,
+    "isTransparent": false,
+    "colorTheme": "dark",
+    "locale": "en"
+  }
+    </script>
+  </div>
+  
+  
+  <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+    {
+    "symbol": "NASDAQ:NDX",
+    "width": 350,
+    "isTransparent": false,
+    "colorTheme": "dark",
+    "locale": "en"
+  }
+    </script>
+  </div>
+  
+  
+  
+  <div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+    {
+    "symbol": "BITSTAMP:BTCUSD",
+    "width": 350,
+    "isTransparent": false,
+    "colorTheme": "dark",
+    "locale": "en"
+  }
+    </script>
+  </div>
+  
+  
+  
+  
+</div>
+</div>
 
 
 
@@ -199,42 +278,11 @@
         <div class="title-wrapper">
             <h2 class="h2 section-title">Market Update</h2>
             
-            <a href="#" class="btn-link">See All Coins</a>
         </div>
         
         <div class="market-tab">
             
-            <ul class="tab-nav">
-                
-                <li>
-                    <button class="tab-btn active">View All</button>
-                </li>
-                
-                <li>
-                    <button class="tab-btn">Metaverse</button>
-                </li>
-                
-                <li>
-                    <button class="tab-btn">Entertainment</button>
-                </li>
-                
-                <li>
-                    <button class="tab-btn">Energy</button>
-                </li>
-                
-                <li>
-                    <button class="tab-btn">NFT</button>
-                </li>
-                
-                <li>
-                    <button class="tab-btn">Gaming</button>
-                </li>
-                
-                <li>
-                    <button class="tab-btn">Music</button>
-                </li>
-                
-            </ul>
+
             
             <table class="market-table">
                 
@@ -250,7 +298,7 @@
                         
                         <th class="table-heading" scope="col">Last Price</th>
                         
-                        <th class="table-heading" scope="col">24h %</th>
+                        <th class="table-heading" scope="col">24h%</th>
                         
                         <th class="table-heading" scope="col">Market Cap</th>
                         
@@ -280,16 +328,16 @@
                                 <img src="./static/images/coin-1.svg" width="20" height="20" alt="Bitcoin logo" class="img">
                                 
                                 <h3>
-                                    <a href="#" class="coin-name">Bitcoin <span class="span">BTC</span></a>
+                                    <a href="#" class="coin-name">Tata Motors <span class="span">Tata Motors</span></a>
                                 </h3>
                             </div>
                         </td>
                         
-                        <td class="table-data last-price">$56,623.54</td>
+                        <td class="table-data last-price">₹1028.0</td>
                         
-                        <td class="table-data last-update green">+1.45%</td>
+                        <td class="table-data last-update red">-1.09%</td>
                         
-                        <td class="table-data market-cap">$880,423,640,582</td>
+                        <td class="table-data market-cap">₹3,45,402</td>
                         
                         <td class="table-data">
                             <img src="./static/images/chart-1.svg" width="100" height="40" alt="profit chart" class="chart">
@@ -317,16 +365,16 @@
                                 <img src="./static/images/coin-2.svg" width="20" height="20" alt="Ethereum logo" class="img">
                                 
                                 <h3>
-                                    <a href="#" class="coin-name">Ethereum <span class="span">ETH</span></a>
+                                    <a href="#" class="coin-name">Bajaj Finserv <span class="span">BAJAJFINSV</span></a>
                                 </h3>
                             </div>
                         </td>
                         
-                        <td class="table-data last-price">$56,623.54</td>
+                        <td class="table-data last-price">₹1,596.0</td>
                         
-                        <td class="table-data last-update red">-5.12%</td>
+                        <td class="table-data last-update green">+0.83%</td>
                         
-                        <td class="table-data market-cap">$880,423,640,582</td>
+                        <td class="table-data market-cap">₹2,52,502</td>
                         
                         <td class="table-data">
                             <img src="./static/images/chart-2.svg" width="100" height="40" alt="loss chart" class="chart">
@@ -354,16 +402,16 @@
                             <img src="./static/images/coin-3.svg" width="20" height="20" alt="Tether logo" class="img">
                             
                             <h3>
-                                <a href="#" class="coin-name">Tether <span class="span">USDT/USD</span></a>
+                                <a href="#" class="coin-name">ADANI PORTS <span class="span">ADANIPORTS</span></a>
                             </h3>
                         </div>
                     </td>
                     
-                    <td class="table-data last-price">$56,623.54</td>
+                    <td class="table-data last-price">₹1,327.0</td>
                     
-                    <td class="table-data last-update green">+1.45%</td>
+                    <td class="table-data last-update red">-0.03%</td>
                     
-                    <td class="table-data market-cap">$880,423,640,582</td>
+                    <td class="table-data market-cap">₹2,86,748</td>
                     
                     <td class="table-data">
                         <img src="./static/images/chart-1.svg" width="100" height="40" alt="profit chart" class="chart">
@@ -391,16 +439,16 @@
                             <img src="./static/images/coin-4.svg" width="20" height="20" alt="BNB logo" class="img">
                             
                             <h3>
-                                <a href="#" class="coin-name">BNB <span class="span">BNB/USD</span></a>
+                                <a href="#" class="coin-name">Cipla Ltd <span class="span">Cipla</span></a>
                             </h3>
                         </div>
                     </td>
                     
-                    <td class="table-data last-price">$56,623.54</td>
+                    <td class="table-data last-price">₹1,504</td>
                     
-                    <td class="table-data last-update red">-3.75%%</td>
+                    <td class="table-data last-update green">+1.48%</td>
                     
-                    <td class="table-data market-cap">$880,423,640,582</td>
+                    <td class="table-data market-cap">₹1,19,648</td>
                     
                     <td class="table-data">
                         <img src="./static/images/chart-2.svg" width="100" height="40" alt="loss chart" class="chart">
@@ -428,16 +476,16 @@
                             <img src="./static/images/coin-5.svg" width="20" height="20" alt="Solana logo" class="img">
                             
                             <h3>
-                                <a href="#" class="coin-name">Solana <span class="span">SOL</span></a>
+                                <a href="#" class="coin-name">Coal India Ltd <span class="span">CoalIndia</span></a>
                             </h3>
                         </div>
                     </td>
                     
-                    <td class="table-data last-price">$56,623.54</td>
+                    <td class="table-data last-price">₹453.4</td>
                     
-                    <td class="table-data last-update green">+1.45%</td>
+                    <td class="table-data last-update red">-1.11%</td>
                     
-                    <td class="table-data market-cap">$880,423,640,582</td>
+                    <td class="table-data market-cap">₹2,82,592</td>
                     
                     <td class="table-data">
                         <img src="./static/images/chart-1.svg" width="100" height="40" alt="profit chart" class="chart">
@@ -465,16 +513,16 @@
                           <img src="./static/images/coin-6.svg" width="20" height="20" alt="XRP logo" class="img">
                           
                           <h3>
-                              <a href="#" class="coin-name">XRP <span class="span">XRP</span></a>
+                              <a href="#" class="coin-name">Eicher Motors Ltd <span class="span">EicherMotors</span></a>
                             </h3>
                         </div>
                     </td>
                     
-                    <td class="table-data last-price">$56,623.54</td>
+                    <td class="table-data last-price">₹3,776</td>
                     
-                    <td class="table-data last-update red">-2.22%</td>
+                    <td class="table-data last-update red">-0.24%</td>
                     
-                    <td class="table-data market-cap">$880,423,640,582</td>
+                    <td class="table-data market-cap">₹1,03,626</td>
                     
                     <td class="table-data">
                         <img src="./static/images/chart-2.svg" width="100" height="40" alt="loss chart" class="chart">
@@ -502,16 +550,16 @@
                             <img src="./static/images/coin-7.svg" width="20" height="20" alt="Cardano logo" class="img">
                             
                             <h3>
-                                <a href="#" class="coin-name">Cardano <span class="span">ADA</span></a>
+                                <a href="#" class="coin-name">Hero MotoCorp Ltd <span class="span">HeroMoto</span></a>
                             </h3>
                         </div>
                     </td>
 
-                    <td class="table-data last-price">$56,623.54</td>
+                    <td class="table-data last-price">₹4,671</td>
                     
-                    <td class="table-data last-update green">+0.8%</td>
+                    <td class="table-data last-update green">+0.40%</td>
                     
-                    <td class="table-data market-cap">$880,423,640,582</td>
+                    <td class="table-data market-cap">₹93,006</td>
                     
                     <td class="table-data">
                         <img src="./static/images/chart-1.svg" width="100" height="40" alt="profit chart" class="chart">
@@ -539,16 +587,16 @@
                             <img src="./static/images/coin-8.svg" width="20" height="20" alt="Avalanche logo" class="img">
                             
                             <h3>
-                                <a href="#" class="coin-name">Avalanche <span class="span">AVAX</span></a>
+                                <a href="#" class="coin-name">Hindustan Unilever Ltd <span class="span">HINDUNILVR</span></a>
                             </h3>
                         </div>
                     </td>
                     
-                    <td class="table-data last-price">$56,623.54</td>
+                    <td class="table-data last-price">₹2,388</td>
                     
-                    <td class="table-data last-update green">+1.41%</td>
+                    <td class="table-data last-update red">-1.34%</td>
                     
-                    <td class="table-data market-cap">$880,423,640,582</td>
+                    <td class="table-data market-cap">₹5,68,754</td>
                     
                     <td class="table-data">
                         <img src="./static/images/chart-1.svg" width="100" height="40" alt="profit chart" class="chart">
@@ -598,7 +646,7 @@
                         
                         <p class="card-subtitle">Step 1</p>
                         
-                        <h3 class="h3 card-title">Download</h3>
+                        <h3 class="h3 card-title">Signup</h3>
                         
                         <p class="card-text">
                             Stacks Is A Production-Ready Library Of Stackable Content Blocks Built In React Native.
