@@ -1,9 +1,329 @@
 {% extends "main.html" %}
 {% load static %}
 {% block head %}
+
+<style>
+    .pt-5 .container .row .section-head p{
+  font-size: 2rem;
+  color: #333;
+  padding: 1rem 0;
+}
+.section-head{
+  margin-bottom: 60px;
+  text-align: center;
+  margin-top: -3rem;
+}
+.section-head p{
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+}
+.item{
+  background:#fff;
+  text-align: center;
+  padding:30px 25px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.07);
+  border-radius: 20px;
+  margin-bottom: 30px;
+  margin-top: -2rem;
+  border:5px solid rgba(0,0,0,0.07);
+  -webkit-transition:all 0.5s ease 0s;
+  transition:all 0.5s ease 0s;
+}
+.item:hover{
+  background:#c8d8e4;
+  box-shadow: 0 8px 20px 0 rgba(0,0,0,0.2);
+  -webkit-transition:all 0.5s ease 0s;
+  transition:all 0.5s ease 0s;
+}
+.item:hover .item,
+.item:hover span.icon{
+  background:#fff;
+  border-radius: 10px;
+  -webkit-transition:all 0.5s ease 0s;
+  transition:all 0.5s ease 0s;
+}
+.item h6{
+    font-size: 2rem;
+}
+.item:hover h6,
+.item:hover p{
+  color:#2b6777;
+  -webkit-transition:all 0.5s ease 0s;
+  transition:all 0.5s ease 0s;
+}
+.item .icon{
+  font-size:40px;
+  margin-bottom: 25px;
+  color:yellow;
+  width:90px;
+  height:90px;
+  line-height: 96px;
+  border-radius: 50px;
+  margin: 0.5em 1em 1em 3em;
+}
+.item .feature_box_col_one{
+  background:rgba(247,198,5,0.2);
+  color:#52ab98;
+}
+.item .feature_box_col_two{
+  background: rgba(255, 77, 28, 0.15);
+  color:#52ab98;
+}
+.item .feature_box_col_three{
+  background:rgba(0,147,38,0.15);
+  color:#52ab98;
+}
+.item .feature_box_col_four{
+  background:rgba(0,108,255,0.15);
+  color:#52ab98;
+}
+.item .feature_box_col_five{
+  background:rgba(146,39,255,0.15);
+  color:#52ab98;
+}
+.item .feature_box_col_six{
+  background:rgba(23,39,246,0.15);
+  color:#52ab98;
+}
+.item p{
+  font-size: 15px;
+  line-height: 26px;
+}
+.item h6{
+  margin-bottom: 20px;
+  color:#2f2f2f;
+}
+
+</style>
+
 {% endblock head %}
 {% block content %}
 
+<div class="pt-5 pb-5" style="background-color: #f2f2f2;">
+    <div class="container">
+      <div class="row">
+        <div class="section-head col-sm-12" id="service">
+          <h1>Our Services</h1>
+          <p>We help you to build high-quality digital solutions and products as well as deliver a wide range of related professional services. We are providing world-class service to our clients.
+            </p>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <div class="item"> <span class="icon feature_box_col_one"><i class="fa fa-laptop"></i></span>
+            <h6>Trading Platform</h6>
+            <p>Deliver a user-friendly online trading platform allowing customers to easily execute buy and sell orders for stocks, bonds, options, and various financial instruments with intuitive navigation and functionality.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <div class="item"> <span class="icon feature_box_col_two"><i class="fa fa-android"></i></span>
+            <h6>Mobile Trading</h6>
+            <p>Create a mobile trading app enabling customers to trade anytime, access real-time market data, and effectively manage their portfolios directly from their smartphones or tablets for convenient and efficient trading.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <div class="item"> <span class="icon feature_box_col_three"><i class="fa fa-magic"></i></span>
+            <h6>Research and Analysis</h6>
+            <p>Provide customers with access to extensive research reports, market analysis, and up-to-date financial news to empower them in making well-informed investment decisions for their portfolios.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <div class="item"> <span class="icon feature_box_col_three"><i class="fa fa-magic"></i></span>
+            <h6>Research and Analysis</h6>
+            <p>Provide customers with access to extensive research reports, market analysis, and up-to-date financial news to empower them in making well-informed investment decisions for their portfolios.</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <footer class="footer">
+    
+        <div class="footer-top" data-section>
+            <div class="container">
+                
+                <div class="footer-brand">
+                    
+                    <a href="#" class="logo">
+                <img src="static/images/logo.png" width="75" height="75" alt="GroMore logo">
+                GroMore
+              </a>
+    
+              <h2 class="footer-title">Let's talk! 🤙</h2>
+    
+              <a href="tel:+123456789101" class="footer-contact-link">+91 94667-71896</a>
+              
+              <a href="mailto:hello.GroMore@gmail.com" class="footer-contact-link">GroMore@gmail.com</a>
+              
+              <address class="footer-contact-link">
+                  Chandigarh-Patiala National Highway Punjab 140401
+                </address>
+                
+            </div>
+            
+            <ul class="footer-list">
+                
+                <li>
+                    <p class="footer-list-title">Products</p>
+                </li>
+                
+                <li>
+                    <a href="#" class="footer-link">Spot</a>
+                </li>
+                
+                <li>
+                    <a href="#" class="footer-link">Inverse Perpetual</a>
+                </li>
+                
+                <li>
+                    <a href="#" class="footer-link">USDT Perpetual</a>
+                </li>
+                
+                <li>
+                    <a href="#" class="footer-link">Exchange</a>
+                </li>
+                
+                <li>
+                    <a href="#" class="footer-link">Launchpad</a>
+                </li>
+                
+                <li>
+                    <a href="#" class="footer-link">Binance Pay</a>
+                </li>
+                
+            </ul>
+            
+            <ul class="footer-list">
+    
+              <li>
+                <p class="footer-list-title">Services</p>
+              </li>
+    
+              <li>
+                  <a href="#" class="footer-link">Buy Crypto</a>
+                </li>
+                
+                <li>
+                    <a href="#" class="footer-link">Markets</a>
+                </li>
+                
+                <li>
+                    <a href="#" class="footer-link">Tranding Fee</a>
+                </li>
+                
+                <li>
+                    <a href="#" class="footer-link">Affiliate Program</a>
+                </li>
+                
+                <li>
+                    <a href="#" class="footer-link">Referral Program</a>
+                </li>
+                
+                <li>
+                    <a href="#" class="footer-link">API</a>
+                </li>
+                
+            </ul>
+            
+            <ul class="footer-list">
+                
+                <li>
+                    <p class="footer-list-title">Support</p>
+                </li>
+                
+                <li>
+                    <a href="#" class="footer-link">Bybit Learn</a>
+                </li>
+                
+                <li>
+                    <a href="#" class="footer-link">Help Center</a>
+                </li>
+                
+                <li>
+                    <a href="#" class="footer-link">User Feedback</a>
+                </li>
+                
+                <li>
+                    <a href="#" class="footer-link">Submit a request</a>
+                </li>
+                
+                <li>
+                    <a href="#" class="footer-link">API Documentation</a>
+                </li>
+    
+                <li>
+                <a href="#" class="footer-link">Trading Rules</a>
+              </li>
+    
+            </ul>
+    
+            <ul class="footer-list">
+                
+                <li>
+                    <p class="footer-list-title">About Us</p>
+                </li>
+                
+                <li>
+                    <a href="#" class="footer-link">About Bybit</a>
+                </li>
+                
+                <li>
+                    <a href="#" class="footer-link">Authenticity Check</a>
+                </li>
+                
+                <li>
+                    <a href="#" class="footer-link">Careers</a>
+                </li>
+    
+                <li>
+                    <a href="#" class="footer-link">Business Contacts</a>
+                </li>
+                
+                <li>
+                    <a href="#" class="footer-link">Blog</a>
+                </li>
+                
+            </ul>
+            
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <div class="container">
+            
+            <p class="copyright">
+                &copy;  GroMore All Rights Reserved </a>
+            </p>
+            
+            <ul class="social-list">
+                
+                <li>
+                    <a href="#" class="social-link">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#" class="social-link">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#" class="social-link">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#" class="social-link">
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                    </a>
+                </li>
+                
+            </ul>
+            
+        </div>
+    </div>
+    
+    </footer>
 
 {% endblock content %}

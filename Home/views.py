@@ -34,3 +34,5 @@ def news(request):
     return render(request,"news.html")
 def analyse(request):
     return render(request,"beg.html")
+def login(request):
+    return render(request,"login1.html")
