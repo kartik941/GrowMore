@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-lpj!m0u!k^@hjbadkaw@rt@4*b__wtyx)8xb&zjq5bx@9l9m^)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -82,7 +82,7 @@ DATABASES = {
     }
 }
 
-DATABASES['default']= dj_database_url.parse("postgres://hometalk_user:F3Iuclti4JYBlmxjq4tGzwUK4CjFMVdb@dpg-cnbla06v3ddc73cckpq0-a/hometalk")
+DATABASES['default']= dj_database_url.parse("postgres://growmore_user:TuecKuBjZzyBy5KJlV6S99AaItWN53zv@dpg-cnsh2u5a73kc73b4rlt0-a.oregon-postgres.render.com/growmore")
 
 
 
