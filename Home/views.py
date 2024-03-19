@@ -35,4 +35,4 @@ def news(request):
 def analyse(request):
     return render(request,"beg.html")
 def login(request):
-    return render(request,"login1.html")
+    return render(request,"homepage.html")
