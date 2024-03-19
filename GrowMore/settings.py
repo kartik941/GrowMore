@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-lpj!m0u!k^@hjbadkaw@rt@4*b__wtyx)8xb&zjq5bx@9l9m^)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['growmore-9n5p.onrender.com','127.1.1.8']
 
 
 # Application definition
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -82,7 +83,7 @@ DATABASES = {
     }
 }
 
-DATABASES['default']= dj_database_url.parse("postgres://hometalk_user:F3Iuclti4JYBlmxjq4tGzwUK4CjFMVdb@dpg-cnbla06v3ddc73cckpq0-a.oregon-postgres.render.com/hometalk")
+DATABASES['default']= dj_database_url.parse("postgres://growmore_user:TuecKuBjZzyBy5KJlV6S99AaItWN53zv@dpg-cnsh2u5a73kc73b4rlt0-a.oregon-postgres.render.com/growmore")
 
 
 
@@ -120,20 +121,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR/"static/"
 ]
 STATIC_ROOT = BASE_DIR / "staticfiles"
-STORAGES = {
-    # ...
-    "default": {
-        "BACKEND": "django.core.files.storage.FileSystemStorage",
-    },
-    "staticfiles": {
-        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
-    },
-}
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
