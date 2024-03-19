@@ -82,7 +82,7 @@ DATABASES = {
     }
 }
 
-DATABASES['default']= dj_database_url.parse("postgres://hometalk_user:F3Iuclti4JYBlmxjq4tGzwUK4CjFMVdb@dpg-cnbla06v3ddc73cckpq0-a.oregon-postgres.render.com/hometalk")
+DATABASES['default']= dj_database_url.parse("postgres://hometalk_user:F3Iuclti4JYBlmxjq4tGzwUK4CjFMVdb@dpg-cnbla06v3ddc73cckpq0-a/hometalk")
 
 
 
