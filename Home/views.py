@@ -14,12 +14,8 @@ def about(request):
         email = request.POST.get("email")
         desc = request.POST.get("message")
         fed = feedback(user = user,contact = contact, email=email, msg=desc)
-        if [validate_email(email)]:
-            fed.save()
-            return render(request, "about.html")
-        else:
-            html = {'value':1}
-            return render(request, "about.html",)
+        fed.save()
+        return render(request, "about.html")
     
 
 
