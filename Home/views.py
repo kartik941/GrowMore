@@ -1,6 +1,7 @@
 from django.shortcuts import render
 import requests
 from .models import *
+import datetime
 
 def starting(request):
     return render(request,"homepage.html")
@@ -46,10 +47,10 @@ def login1(request):
                     regist.save()
                     return render(request,"login2.html")
             else:
-                return render(request,'login1.html',{'value':1})
+                return render(request,'login1.html',{'value':0})
     except:
-        html = {'value': 0}
-        return render(request, "register.html", html)
+        html = {'value': 1}
+        return render(request, "login2.html", html)
     return render(request,"login1.html")
 def login2(request):
     if request.method == "POST":
@@ -57,9 +58,9 @@ def login2(request):
         psw = request.POST.get("psw")
         if not reg.objects.filter(email=email,password = psw):
             html = {'value':1}
-            return render(request,"index.html",html )
+            return render(request,"login2.html",html )
         else:
-            return render(request,'login2.html')
+            return render(request,'login1.html')
     return render(request,"login2.html")
 def tutorial(request):
     return render(request,"tutorial.html")
