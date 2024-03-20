@@ -36,3 +36,9 @@ def analyse(request):
     return render(request,"beg.html")
 def login(request):
     return render(request,"homepage.html")
+def login1(request):
+    return render(request,"login1.html")
+def login2(request):
+    return render(request,"login2.html")
+def tutorial(request):
+    return render(request,"tutorial.html")
