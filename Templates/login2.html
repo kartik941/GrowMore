@@ -8,7 +8,7 @@
     <link rel="icon" href="https://fontawesome.com/icons/user?f=classic&s=regular">
     <style>
         body{
-            background-image: url(https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            background-image: url(static/images/login_bg.jpg);
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;
@@ -57,6 +57,17 @@
             outline: solid;
 
         }
+        #loginbtn{
+            width: 90px;
+            font-size: 20px;
+            margin-top: 15px;
+            margin-left: 30%;
+            cursor: pointer;
+            border-radius: 30px;
+        }
+        #loginbtn:hover{
+            background-color:mediumturquoise;
+        }
     </style>
     
 </head>
@@ -71,9 +82,7 @@
             <label for="psw" ><b>Password</b></label><br>
             <input type="password" id="psw" name="psw"  style="width: 300px;height: 40px;" placeholder="Password" required >
             <button id="loginbtn"><b>Submit</b></button><br>
-            <a href="register.html" style="font-size: 15px;float: left;margin-top: 5%; display: inline;">create new account</a>
-            <a href="forgot" style="font-size: 15px;float: right;margin-right: 5%;margin-top: 5%;">forgot password</a>
-        </form>
+            </form>
         <script>
             if ({{value}} ==1){
             alert("wrong username or password")}

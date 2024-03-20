@@ -58,9 +58,9 @@ def login2(request):
         psw = request.POST.get("psw")
         if not reg.objects.filter(email=email,password = psw):
             html = {'value':1}
-            return render(request,"login2.html",html )
+            return render(request,"login1.html",html )
         else:
-            return render(request,'login1.html')
+            return render(request,'index.html')
     return render(request,"login2.html")
 def tutorial(request):
     return render(request,"tutorial.html")
