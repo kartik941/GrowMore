@@ -77,7 +77,7 @@
 <body >
 
     <div class="form1" style="display: flex;justify-content: center;">
-        <form action="/register" method="POST" style="padding-left: 5%;font-size: 20px;padding-right: 2em;" >
+        <form action="" method="POST" style="padding-left: 5%;font-size: 20px;padding-right: 2em;" >
             {% csrf_token %}
             <h1 id="signup"><strong> Sign up</strong></h1>
             <label for="fname"><b>First Name</b></label>
@@ -96,9 +96,9 @@
         </form>
     </div>
     <script>
-        if({{value}} == 0 ){
+        if({{value}} == 1 ){
             alert("invalid email address")
-        }else if({{value}}==1){
+        }else if({{value}}==0){
             alert("email alreay exists")
         }
 
