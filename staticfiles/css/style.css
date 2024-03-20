@@ -1610,10 +1610,10 @@ p{
 }
 .faq{
   min-height: 70vh;
-  width: 100vw;
+  width: 100vh;
   text-align: center;
   padding: 0 2rem;
-  background: url(../images/faq.jpg);
+  background: url(static/images/faq.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
