@@ -21,3 +21,12 @@ class reg(models.Model):
     def __str__(self):
         return self.email
 
+
+class con(models.Model):
+    name = models.CharField(max_length=122)
+    email = models.EmailField(max_length=122,validators=[validate_email])
+    desc = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.email
+
