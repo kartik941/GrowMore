@@ -12,142 +12,131 @@
 {% endblock head %}
 {% block content %}
 
-<div class="market container-fluid">
+<div class="market container" style="margin-top: 9rem;">
 
 
-    <div class="tradingview-widget-container">
-      <div class="tradingview-widget-container__widget"></div>
-      <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
-      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js" async>
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js" async>
+  {
+  "width": "100%",
+  "height": "550",
+  "symbolsGroups": [
+  {
+      "name": "STOCKS",
+      "symbols": [
         {
-    "width": "100%",
-    "height": "550",
-    "symbolsGroups": [
-      {
-        "name": "Indices",
-        "originalName": "Indices",
-        "symbols": [
-          {
-            "name": "FOREXCOM:SPXUSD",
-            "displayName": "S&P 500 Index"
-          },
-          {
-            "name": "FOREXCOM:NSXUSD",
-            "displayName": "US 100 Cash CFD"
-          },
-          {
-            "name": "FOREXCOM:DJI",
-            "displayName": "Dow Jones Industrial Average Index"
-          },
-          {
-            "name": "INDEX:NKY",
-            "displayName": "Nikkei 225"
-          },
-          {
-            "name": "INDEX:DEU40",
-            "displayName": "DAX Index"
-          },
-          {
-            "name": "FOREXCOM:UKXGBP",
-            "displayName": "FTSE 100 Index"
-          }
-        ]
-      },
-      {
-        "name": "Futures",
-        "originalName": "Futures",
-        "symbols": [
-          {
-            "name": "CME_MINI:ES1!",
-            "displayName": "S&P 500"
-          },
-          {
-            "name": "CME:6E1!",
-            "displayName": "Euro"
-          },
-          {
-            "name": "COMEX:GC1!",
-            "displayName": "Gold"
-          },
-          {
-            "name": "NYMEX:CL1!",
-            "displayName": "WTI Crude Oil"
-          },
-          {
-            "name": "NYMEX:NG1!",
-            "displayName": "Gas"
-          },
-          {
-            "name": "CBOT:ZC1!",
-            "displayName": "Corn"
-          }
-        ]
-      },
-      {
-        "name": "Bonds",
-        "originalName": "Bonds",
-        "symbols": [
-          {
-            "name": "CBOT:ZB1!",
-            "displayName": "T-Bond"
-          },
-          {
-            "name": "CBOT:UB1!",
-            "displayName": "Ultra T-Bond"
-          },
-          {
-            "name": "EUREX:FGBL1!",
-            "displayName": "Euro Bund"
-          },
-          {
-            "name": "EUREX:FBTP1!",
-            "displayName": "Euro BTP"
-          },
-          {
-            "name": "EUREX:FGBM1!",
-            "displayName": "Euro BOBL"
-          }
-        ]
-      },
-      {
-        "name": "Forex",
-        "originalName": "Forex",
-        "symbols": [
-          {
-            "name": "FX:EURUSD",
-            "displayName": "EUR to USD"
-          },
-          {
-            "name": "FX:GBPUSD",
-            "displayName": "GBP to USD"
-          },
-          {
-            "name": "FX:USDJPY",
-            "displayName": "USD to JPY"
-          },
-          {
-            "name": "FX:USDCHF",
-            "displayName": "USD to CHF"
-          },
-          {
-            "name": "FX:AUDUSD",
-            "displayName": "AUD to USD"
-          },
-          {
-            "name": "FX:USDCAD",
-            "displayName": "USD to CAD"
-          }
-        ]
-      }
-    ],
-    "showSymbolLogo": true,
-    "isTransparent": false,
-    "colorTheme": "dark",
-    "locale": "en",
-    "backgroundColor": "#131722"
-  }
+          "name": "BSE:SBIN",
+          "displayName": "STATE BANK OF INDIA "
+        },
+        {
+          "name": "BSE:RELIANCE",
+          "displayName": "RELIANCE "
+        },
+        {
+          "name": "BSE:BPCL",
+          "displayName": "BHARAT PETROLEUM "
+        },
+        {
+          "name": "BSE:ONGC",
+          "displayName": "OIL AND NATURAL GAS"
+        },
+        {
+          "name": "BSE:COALINDIA",
+          "displayName": "COAL INDIA"
+        },
+        {
+          "name": "BSE:BHARTIARTL",
+          "displayName": "AIRTEL"
+        },
+        {
+          "name": "BSE:RCOM",
+          "displayName": "RCOM"
+        },
+        {
+          "name": "BSE:IRCTC",
+          "displayName": "IRCTC"
+        },
+        {
+          "name": "BSE:LICI",
+          "displayName": "LIC"
+        },
+        {
+          "name": "BSE:TCS",
+          "displayName": "TCS"
+        }
+
+
+      ]
+    },
+    {
+      "name": "F/O",
+      "originalName": "Indices",
+      "symbols": [
+        {
+          "name": "BSE:OILGAS",
+          "displayName": "OIL&GAS"
+        },
+        {
+          "name": "BSE:SENSEX",
+          "displayName": "S&P BSE SENSEX"
+        },
+        {
+          "name": "BSE:BANK",
+          "displayName": "S&P BANK"
+        },
+        {
+          "name": "BSE:TELCOM",
+          "displayName": "TELCOM"
+        },
+        {
+          "name": "NCDEX:GOLD",
+          "displayName": "GOLD"
+        }
+      ]
+    },
+    {
+      "name": "Forex",
+      "originalName": "Forex",
+      "symbols": [
+        {
+          "name": "FX:EURUSD",
+          "displayName": "EUR to USD"
+        },
+        {
+          "name": "FX:GBPUSD",
+          "displayName": "GBP to USD"
+        },
+        {
+          "name": "FX:USDJPY",
+          "displayName": "USD to JPY"
+        },
+        {
+          "name": "FX:USDCHF",
+          "displayName": "USD to CHF"
+        },
+        {
+          "name": "FX:AUDUSD",
+          "displayName": "AUD to USD"
+        },
+        {
+          "name": "FX:USDCAD",
+          "displayName": "USD to CAD"
+        }
+      ]
+    }
+    
+  ],
+  "showSymbolLogo": true,
+  "isTransparent": false,
+  "colorTheme": "dark",
+  "locale": "en",
+  "backgroundColor": "#131722"
+}
   </script>
-  </div>
+</div>
+
 </div>
 
 {% endblock content %}

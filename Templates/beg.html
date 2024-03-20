@@ -1,119 +1,261 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GrowMore</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
+{% extends "main.html" %}
+{% load static %}
 {% block head %}
+<style>
+    .chart a { 
+      opacity:  0; 
+      pointer-events: none;
+    }
+    .button123 {
+  all: unset;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0.6em 2em;
+  border: mediumspringgreen solid 0.15em;
+  border-radius: 0.25em;
+  color: mediumspringgreen;
+  font-size: 1.5em;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border 300ms, color 300ms;
+  user-select: none;
+}
 
+.button123 p {
+  z-index: 1;
+}
+
+.button123:hover {
+  color: #212121;
+}
+
+.button123:active {
+  border-color: teal;
+}
+
+.button123::after, .button123::before {
+  content: "";
+  position: absolute;
+  width: 9em;
+  aspect-ratio: 1;
+  background: mediumspringgreen;
+  opacity: 50%;
+  border-radius: 50%;
+  transition: transform 500ms, background 300ms;
+}
+
+.button123::before {
+  left: 0;
+  transform: translateX(-8em);
+}
+
+.button123::after {
+  right: 0;
+  transform: translateX(8em);
+}
+
+.button123:hover:before {
+  transform: translateX(-1em);
+}
+
+.button123:hover:after {
+  transform: translateX(1em);
+}
+
+.button123:active:before,
+.button123:active:after {
+  background: teal;
+}
+</style>
 {% endblock head %}
-  </head>
-  <body>
-    <!DOCTYPE html>
-<html lang="en">
+{% block content %}
+<div style="height: 100%;">
+<div style="margin-top: 11rem;display: flex;" class="chart container" >
+<div style="flex: 60">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GrowMore - Buy & Sell Digital static In The GrowMore</title>
-
-  <!-- 
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
-
-  <!-- 
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./static/css/style.css">
-
-  <!-- 
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-</head>
-
-<body>
-
-  <!-- 
-    - #HEADER
-  -->
-
-  <header class="header" data-header>
-    <div class="container">
-
-      <a href="#" class="logo ">
-        <img  src="./static/images/logo.png" width="72" height="52" alt="GrowMore logo">
-        GrowMore
-      </a>
-
-      <nav class="navbar" data-navbar>
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <a href="home" class="navbar-link active" data-nav-link>Homepage</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="charts" class="navbar-link" data-nav-link>Charts</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="market" class="navbar-link" data-nav-link>Markets</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#" class="navbar-link" data-nav-link>Sell Crypto</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#" class="navbar-link" data-nav-link>Blog</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="about" class="navbar-link" data-nav-link>About</a>
-          </li>
-
-        </ul>
-      </nav>
-
-      <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>
-        <span class="line line-1"></span>
-        <span class="line line-2"></span>
-        <span class="line line-3"></span>
-      </button>
-
-      <a href="#" class="btn btn-outline">Wallet</a>
-
+    <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Track all markets on TradingView</span></a></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+ {
+    "width": "125%",
+  "height": "550",
+  "symbol": "BSE:ZOMATO",
+  "interval": "D",
+  "timezone": "Etc/UTC",
+  "theme": "dark",
+  "style": "1",
+  "locale": "en",
+  "enable_publishing": false,
+  "allow_symbol_change": true,
+  "calendar": false,
+  "support_host": "https://www.tradingview.com"
+}
+    </script>
     </div>
-  </header>
+</div>
+<div style="flex: 40; padding-left: 15em;">
+  <img style="width: 21em; height: 25em; padding-bottom: 0em;" src="./static/images/logo.png" alt="GroMore">
+  <div style="padding-left: 5em; margin-bottom: 3em;">
+    <a href="tutorial"><button class="button123">
+    </a><p>Tutorials</p>
+  </button>
+  </div>
+  <br><br>
+</div>
 
-    {% block content %}
-
+<div style="width: 2em; height: 2em;">
+  
+</div>
     
-    {% endblock content %}
+
+</div>
+</div>
+<section class="faq" style="background-color: #222;">
+  <h1 class="heading" style="margin-top: -2rem; color: #00bfff;" id="faq">FAQ</h1>
+  <div class="row">
+      <div class="accordion-container">
+          <div class="accordion">
+              <div class="accordion-header">
+                  <span>+</span>
+                  <h3>How much will it cost?</h3>
+              </div>
+              <div class="accordion-body">
+                  <p>To get a better idea of the cost of what you want to build, give us a quick phone call. We’ll ask you a few questions about the nature of the site, what sort of interactivity the site will have, your graphic design needs, etc. 
+                      Then we’ll be able to give you a ballpark figure. 
+                      If you’re still interested, we’ll come to your place of business and come up with a firm quote.</p>
+              </div>
+          </div>
+          <div class="accordion">
+              <div class="accordion-header">
+                  <span>+</span>
+                  <h3>How long it takes to design?</h3>
+              </div>
+              <div class="accordion-body">
+                  <p>The time limit of any assignment is normally dictated by the client. If you have any time limit in mind we will attempt to assemble it for you. 
+                      The main general delay in the making of a website is waiting for the content of the pages to be sent to us by the client.</p>
+              </div>
+          </div>
+          <div class="accordion">
+              <div class="accordion-header">
+                  <span>+</span>
+                  <h3>How do I associate with IT Company?</h3>
+              </div>
+              <div class="accordion-body">
+                  <p>The process begins when you contact us with your requirements. We analyze your requirements and respond to you. 
+                      On the basis of the further discussion, you can choose an engagement model that suits you the best. 
+                      After that, we begin the process of development.</p>
+              </div>
+          </div>
+          <div class="accordion">
+              <div class="accordion-header">
+                  <span>+</span>
+                  <h3>Can you help my current site look more professional?</h3>
+              </div>
+              <div class="accordion-body">
+                  <p>Yes. Give us your requirements and we have experienced expertise to help you give a 
+                      new professional look that really wonders!</p>
+              </div>
+          </div>
+          <div class="accordion">
+              <div class="accordion-header">
+                  <span>+</span>
+                  <h3>When do I pay?</h3>
+              </div>
+              <div class="accordion-body">
+                  <p>For most projects, equal payments are made at the start, midway, and the end of the project, but we can work with you to set up a schedule that meets your needs. 
+                      We understand that this is a big investment and want to help you budget for the expense in whatever way possible.
+                      We accept checks, PayPal, and all major credit cards.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<script>
+  if ({{value}} ==1){
+  alert("wrong email")}
+</script>
+<script >$(document).ready(function(){
+
+  $('.fa-bars').click(function(){
+     $(this).toggleClass('fa-times');
+     $('.navbar').toggleClass('nav-toggle');
+ });
+
+ $(window).on('load scroll',function(){
+     $('.fa-bars').removeClass('fa-times');
+     $('.navbar').removeClass('nav-toggle');
+
+     if($(window).scrollTop()>35)
+     {
+         $('.header').css({'background':'#002e5f','box-shadow':'0 .2rem .5rem rgba(0,0,0,.4)'});
+     }
+     else
+     {
+         $('.header').css({'background':'none','box-shadow':'none'});
+     }
+ });
+
+ const counters = document.querySelectorAll('.counter');
+ const speed = 120;
+ counters.forEach(counter => {
+ const updateCount = () => {
+     const target = +counter.getAttribute('data-target');
+     const count = +counter.innerText;
+     const inc = target / speed;
+     if (count < target) {
+         counter.innerText = count + inc;
+         setTimeout(updateCount, 1);
+     } else {
+         counter.innerText = target;
+     }
+ };
+   updateCount();
+});
+
+(function ($) {
+ "use strict";
+ 
+ $(".clients-carousel").owlCarousel({
+     autoplay: true,
+     dots: true,
+     loop: true,
+     responsive: { 0: {items: 2}, 768: {items: 4}, 900: {items: 6} }
+ });
+
+ $(".testimonials-carousel").owlCarousel({
+     autoplay: true,
+     dots: true,
+     loop: true,
+     responsive: { 0: {items: 1}, 576: {items: 2}, 768: {items: 3}, 992: {items: 4} }
+ });
+ 
+})(jQuery);
+
+$(window).scroll(function () {
+ if ($(this).scrollTop() > 100) {
+     $('.back-to-top').fadeIn('slow');
+ } else {
+     $('.back-to-top').fadeOut('slow');
+ }
+});
+$('.back-to-top').click(function () {
+ $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+ return false;
+});
+
+$('.accordion-header').click(function(){
+ $('.accordion .accordion-body').slideUp(500);
+ $(this).next('.accordion-body').slideDown(500);
+ $('.accordion .accordion-header span').text('+');
+ $(this).children('span').text('-');
+});
+
+});
+</script>
 
 
 
-
-
-
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-
-</body>
-</html>
+{% endblock content %}
