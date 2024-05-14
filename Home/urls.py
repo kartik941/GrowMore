@@ -14,3 +14,4 @@ urlpatterns = [
     path('login2', views.login2), 
     path('tutorial', views.tutorial), 
 ]
+#urls
