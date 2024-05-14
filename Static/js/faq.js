@@ -75,3 +75,4 @@ $('.accordion-header').click(function(){
 });
 
 });
+// for faq questions
